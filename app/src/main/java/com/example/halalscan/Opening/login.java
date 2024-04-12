@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.halalscan.App.homee;
 import com.example.halalscan.R;
 
 public class login extends AppCompatActivity {
@@ -42,5 +43,10 @@ public class login extends AppCompatActivity {
         spannableString.setSpan(clickableSpan, text.indexOf("SIGN UP"), text.length(), SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
         textView.setText(spannableString);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    public void goToHome(View v){
+        Intent i = new Intent(this, homee.class);
+        startActivity(i);
     }
 }
